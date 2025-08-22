@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sensor Data Dashboard</h1>
+        <h1>Bảng theo dõi cảm biến</h1>
         <div class="data-block">
                 <div class="data-item" id="temp">Nhiệt độ: </div>
                 <div class="data-item" id="humi">Độ ẩm: </div>
@@ -25,7 +25,7 @@
                         document.getElementById('current').textContent = 'Dòng điện: ' + data.current;
                     });
             }
-            setInterval(updateSensorData, 2000); // Cập nhật mỗi 2 giây
+            setInterval(updateSensorData, 2000); 
             updateSensorData();
             </script>
         </div>
