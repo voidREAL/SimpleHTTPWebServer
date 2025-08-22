@@ -1,3 +1,4 @@
+from flask import Flask, render_template, request, jsonify
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -16,6 +17,15 @@ def get_sensor_data():
     gas = float(data.get('gas'))
     current = float(data.get('current'))
     return "OK", 200
+
+@app.route('/api/sensordata')
+def api_sensor_data():
+    return jsonify({
+        'temp': temp,
+        'humi': humi,
+        'gas': gas,
+        'current': current
+    })
 
 
 @app.route('/')
